@@ -446,6 +446,8 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common -fshort-wchar \
 		   -Wno-implicit-function-declaration \
 		   -Wno-error=implicit-function-declaration \
+		   -Wno-int-conversion \
+		   -Wno-error=int-conversion \
 		   -Wno-ignored-optimization-argument \
 		   -Wno-error=ignored-optimization-argument \
 		   -Wno-error \
