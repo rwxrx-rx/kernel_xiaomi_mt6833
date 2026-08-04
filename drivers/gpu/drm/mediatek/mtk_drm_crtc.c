@@ -28,6 +28,7 @@
 #include <linux/kthread.h>
 #include <linux/sched.h>
 #include <uapi/linux/sched/types.h>
+#include <linux/ftrace.h>
 
 
 #include "mtk_drm_arr.h"
