@@ -16,6 +16,7 @@
 
 #include "mtk_drm_ddp_comp.h"
 #include <linux/ftrace.h>
+#include <linux/trace_events.h>
 
 #define DRM_TRACE_ID 0xFFFF0000
 #define DRM_TRACE_FPS_ID (DRM_TRACE_ID + 1)
