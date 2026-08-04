@@ -446,8 +446,11 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common -fshort-wchar \
 		   -Wno-implicit-function-declaration \
 		   -Wno-error=implicit-function-declaration \
+		   -Wno-ignored-optimization-argument \
+		   -Wno-error=ignored-optimization-argument \
 		   -Wno-error \
 		   -Wno-format-security \
+		   -Qunused-arguments \
 		   -std=gnu89
 KBUILD_CPPFLAGS := -D__KERNEL__
 KBUILD_AFLAGS_KERNEL :=
