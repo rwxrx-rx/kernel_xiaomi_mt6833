@@ -18,6 +18,10 @@
 #include <linux/ftrace.h>
 #include <linux/trace_events.h>
 
+/* Kill event_trace_printk globally for all MTK DRM files to fix Clang build */
+#undef event_trace_printk
+#define event_trace_printk(mark, fmt, ...) do { } while (0)
+
 #define DRM_TRACE_ID 0xFFFF0000
 #define DRM_TRACE_FPS_ID (DRM_TRACE_ID + 1)
 #define DRM_TRACE_FENCE_ID (DRM_TRACE_ID + 2)
