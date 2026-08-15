@@ -89,6 +89,27 @@ void selinux_ss_init(struct selinux_ss **ss)
 	*ss = &selinux_ss;
 }
 
+/*
+ * KernelSU compat accessors (kernel < 5.1.0 layout):
+ * struct selinux_ss is private to security/selinux/ss/, so drivers
+ * outside this directory (e.g. drivers/KernelSU) cannot reach
+ * selinux_state.ss->policydb or ->policy_rwlock directly.
+ */
+struct policydb *ksu_selinux_policydb(void)
+{
+	return &selinux_ss.policydb;
+}
+
+void ksu_selinux_policy_wrlock(void)
+{
+	write_lock_irq(&selinux_ss.policy_rwlock);
+}
+
+void ksu_selinux_policy_wrunlock(void)
+{
+	write_unlock_irq(&selinux_ss.policy_rwlock);
+}
+
 /* Forward declaration. */
 static int context_struct_to_string(struct policydb *policydb,
 				    struct context *context,
