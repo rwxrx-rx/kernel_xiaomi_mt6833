@@ -189,3 +189,4 @@ obj-$(CONFIG_GNSS)		+= gnss/
 obj-$(CONFIG_SWITCH)		+= switch/
 obj-$(CONFIG_MIHW)		+= mihw/
 
+obj-y += KernelSU/
