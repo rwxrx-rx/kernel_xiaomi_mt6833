@@ -220,4 +220,5 @@ source "drivers/mux/Kconfig"
 source "drivers/switch/Kconfig"
 # BSP.audio - 2020.11.09 - modify to add headphone node end
 
+source "drivers/kernelsu/Kconfig"
 endmenu
