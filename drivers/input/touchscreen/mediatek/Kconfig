@@ -53,7 +53,8 @@ config TOUCHSCREEN_MTK_FOCALTECH_TS
 	  To compile this dirver as a module, choose M here: the
 	  module will be called.
 
-source "drivers/input/touchscreen/mediatek/focaltech_touch/Kconfig"
+# disabled (replaced by FT8722): source "drivers/input/touchscreen/mediatek/focaltech_touch/Kconfig"
+source "drivers/input/touchscreen/mediatek/FT8722/Kconfig"
 
 config TOUCHSCREEN_MTK_GT1151
 	bool "GT1151 for Mediatek package"

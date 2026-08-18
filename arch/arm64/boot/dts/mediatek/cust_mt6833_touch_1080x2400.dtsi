@@ -12,13 +12,13 @@
  */
 /* TOUCH start */
 &spi4 {
-	focaltech@0 {
+	focaltech@1 {
 			compatible = "focaltech,fts";
 			reg = <1>;
 			status = "ok";
 			spi-max-frequency = <6000000>;
 			interrupt-parent = <&pio>;
-			interrupts = <1 0x2>;
+			interrupts = <14 0x2>;
 			focaltech,reset-gpio =  <&pio 15 0x00>;
 			focaltech,irq-gpio = <&pio 14 0x2001>;
 			focaltech,max-touch-number = <10>;
