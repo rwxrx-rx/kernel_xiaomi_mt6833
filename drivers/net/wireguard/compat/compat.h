@@ -782,9 +782,12 @@ static inline void crypto_xor_cpy(u8 *dst, const u8 *src1, const u8 *src2,
 #endif
 
 #if LINUX_VERSION_CODE < KERNEL_VERSION(4, 14, 0)
+#ifndef __kernel_timespec_defined
+#define __kernel_timespec_defined
 struct __kernel_timespec {
 	int64_t tv_sec, tv_nsec;
-};
+}
+#endif;
 #elif LINUX_VERSION_CODE < KERNEL_VERSION(5, 1, 0)
 #include <linux/time64.h>
 #ifdef __kernel_timespec
