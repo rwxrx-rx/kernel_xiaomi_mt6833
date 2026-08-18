@@ -734,6 +734,7 @@ enum {
 	FI_NO_ALLOC,		/* should not allocate any blocks */
 	FI_FREE_NID,		/* free allocated nide */
 	FI_NO_EXTENT,		/* not to use the extent cache */
+	FI_COMPRESS_RELEASED,
 	FI_INLINE_XATTR,	/* used for inline xattr */
 	FI_INLINE_DATA,		/* used for inline data*/
 	FI_INLINE_DENTRY,	/* used for inline dentry */
@@ -2980,6 +2981,7 @@ static inline bool f2fs_may_extent_tree(struct inode *inode)
 
 	if (!test_opt(sbi, EXTENT_CACHE) ||
 			is_inode_flag_set(inode, FI_NO_EXTENT) ||
+	FI_COMPRESS_RELEASED,
 			is_inode_flag_set(inode, FI_COMPRESSED_FILE))
 		return false;
 
